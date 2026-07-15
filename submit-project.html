@@ -275,28 +275,27 @@
         submitButton.disabled = true;
         submitButton.textContent = 'جاري الإرسال...';
 
-        const payload = {
-          projectName: form.projectName.value.trim(),
-          ownerName: form.ownerName.value.trim(),
-          phone: form.phone.value.trim(),
-          governorate: form.governorate.value.trim(),
-          city: form.city.value.trim(),
-          category: form.category.value,
-          description: form.description.value.trim(),
-          facebook: form.facebook.value.trim(),
-          instagram: form.instagram.value.trim(),
-          tiktok: form.tiktok.value.trim(),
-          googleMaps: form.maps.value.trim()
-        };
+        const formData = new FormData();
+        formData.append('projectName', form.projectName.value.trim());
+        formData.append('ownerName', form.ownerName.value.trim());
+        formData.append('phone', form.phone.value.trim());
+        formData.append('governorate', form.governorate.value.trim());
+        formData.append('city', form.city.value.trim());
+        formData.append('category', form.category.value);
+        formData.append('description', form.description.value.trim());
+        formData.append('facebook', form.facebook.value.trim());
+        formData.append('instagram', form.instagram.value.trim());
+        formData.append('tiktok', form.tiktok.value.trim());
+        formData.append('googleMaps', form.maps.value.trim());
 
         try {
           const response = await fetch('https://script.google.com/macros/s/AKfycbzKYrewhxTVhDEw13T5avndSlMiGiBhB74nyuHe9_Jc9QBeyELgbdcpEq_Gg_hNBxk-oA/exec', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
+            body: formData,
+            mode: 'no-cors'
           });
 
-          if (!response.ok) {
+          if (!response.ok && response.type !== 'opaque') {
             throw new Error('Network response was not ok');
           }
 
