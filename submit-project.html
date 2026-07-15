@@ -115,17 +115,11 @@
         resize: vertical;
       }
 
-      .upload-box {
-        border: 1px dashed var(--border);
-        border-radius: 16px;
-        padding: 0.9rem 1rem;
-        background: rgba(255,255,255,0.75);
-      }
-
-      .upload-box input {
-        border: 0;
-        padding: 0;
-        background: transparent;
+      .note {
+        margin: 0 0 0.9rem;
+        color: var(--primary-deep);
+        font-weight: 700;
+        font-size: 0.95rem;
       }
 
       .actions {
@@ -233,20 +227,7 @@
               </div>
             </div>
 
-            <div class="grid">
-              <div class="field">
-                <label for="coverImage">Upload Cover Image</label>
-                <div class="upload-box">
-                  <input id="coverImage" name="coverImage" type="file" />
-                </div>
-              </div>
-              <div class="field">
-                <label for="logo">Upload Logo</label>
-                <div class="upload-box">
-                  <input id="logo" name="logo" type="file" />
-                </div>
-              </div>
-            </div>
+            <p class="note">سيتم التواصل معك لاحقًا لطلب شعار المشروع وصورته بعد مراجعة الطلب.</p>
 
             <div class="actions">
               <button type="submit">إرسال الطلب</button>
