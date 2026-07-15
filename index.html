@@ -1,98 +1,224 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>السيدة | قريبًا</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="السيدة — دليل المرأة في كل مكان" />
+    <title>السيدة | دليل المرأة في كل مكان</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero" id="top">
+        <div class="container">
+          <nav class="nav" aria-label="التنقل الرئيسي">
+            <a class="logo" href="#top" aria-label="السيدة">
+              <span class="logo__mark">✿</span>
+              <span>السيدة</span>
+            </a>
+            <div class="nav__links">
+              <a href="#about">من نحن</a>
+              <a href="#categories">التصنيفات</a>
+              <a href="#follow">تابعينا</a>
+            </div>
+          </nav>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Tahoma,sans-serif;
-}
+          <div class="hero__content">
+            <div class="hero__visual reveal" aria-label="تصميم مميز">
+              <div class="hero__visual-card">
+              <div class="hero__collage">
+                <div class="hero__avatar hero__avatar--main"></div>
+                <div class="hero__avatar hero__avatar--side"></div>
+                <div class="hero__avatar hero__avatar--top"></div>
+                <div class="hero__avatar hero__avatar--bottom"></div>
+              </div>
+              <div class="hero__visual-pill">✨ منصة جديدة</div>
+            </div>
+            </div>
 
-body{
-background:linear-gradient(135deg,#5a2a82,#8e44ad);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-text-align:center;
-padding:20px;
-}
+            <div class="hero__copy reveal">
+              <p class="eyebrow">منصة نسائية مميزة</p>
+              <h1>السيدة</h1>
+              <h2>دليل المرأة في كل مكان</h2>
+              <p>اكتشفي أفضل الأماكن والخدمات والمشاريع النسائية في منصة واحدة.</p>
+              <div class="hero__actions">
+                <a class="btn btn--primary" href="#cta">🌸 رشحي مشروعك</a>
+                <a class="btn btn--ghost" href="#categories">استكشفي التصنيفات</a>
+              </div>
+              <div class="hero__meta">
+                <div>
+                  <strong>250+</strong>
+                  <span>مشروع</span>
+                </div>
+                <div>
+                  <strong>24/7</strong>
+                  <span>تجربة مخصصة</span>
+                </div>
+                <div>
+                  <strong>4.9</strong>
+                  <span>تقييم</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
 
-.card{
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(12px);
-padding:50px;
-border-radius:25px;
-max-width:700px;
-width:100%;
-box-shadow:0 20px 50px rgba(0,0,0,.3);
-}
+      <main>
+        <section class="about section container" id="about">
+          <div class="section-heading reveal">
+            <p class="eyebrow">لماذا السيدة؟</p>
+            <h2>منصة تجمع بين الرفاهية والتميز</h2>
+            <p>نقدّم لكِ تجربة مريحة ومبتكرة لاكتشاف الأفضل في حياتكِ اليومية، من الخدمات إلى المشاريع الإبداعية.</p>
+          </div>
 
-h1{
-font-size:55px;
-margin-bottom:15px;
-}
+          <div class="about-grid">
+            <article class="about-card reveal">
+              <h3>اكتشفي بخطوة واحدة</h3>
+              <p>كل ما تحتاجينه في مكان واحد، بصياغة أنيقة وسهلة التصفح.</p>
+            </article>
+            <article class="about-card reveal">
+              <h3>ثقة واحتراف</h3>
+              <p>نختار لكِ أفضل الخيارات بعناية بما يليق بالمرأة الحديثة.</p>
+            </article>
+            <article class="about-card reveal">
+              <h3>تجربة عميقة</h3>
+              <p>من المجتمعات إلى المشاريع، كل التفاصيل مصممة لتمنحكِ إحساسًا مميزًا.</p>
+            </article>
+          </div>
+        </section>
 
-p{
-font-size:22px;
-line-height:1.8;
-opacity:.9;
-}
+        <section class="categories section container" id="categories">
+          <div class="section-heading reveal">
+            <p class="eyebrow">التصنيفات</p>
+            <h2>اكتشفي عالمًا من الإلهام</h2>
+            <p>كل فئة مصممة لتفتح لكِ آفاقًا جديدة ومناسبة لاهتماماتكِ.</p>
+          </div>
 
-.btn{
-display:inline-block;
-margin-top:35px;
-padding:15px 35px;
-background:white;
-color:#5a2a82;
-text-decoration:none;
-border-radius:50px;
-font-weight:bold;
-transition:.3s;
-}
+          <div class="categories-grid">
+            <article class="category-card reveal">
+              <div class="icon">💄</div>
+              <h3>الجمال</h3>
+              <p>أفضل النصائح والخدمات والأفكار الجميلة.</p>
+            </article>
+            <article class="category-card reveal">
+              <div class="icon">🩺</div>
+              <h3>الصحة</h3>
+              <p>معلومات ومرافق تُعنى بالرفاهية والراحة.</p>
+            </article>
+            <article class="category-card reveal">
+              <div class="icon">👶</div>
+              <h3>الأمومة</h3>
+              <p>مجموعة من القرارات والمشاريع التي تدعم الأمومة.</p>
+            </article>
+            <article class="category-card reveal">
+              <div class="icon">🛍️</div>
+              <h3>التسوق</h3>
+              <p>أماكن متنوعة ومميزة تناسب ذوقكِ وتطلعاتكِ.</p>
+            </article>
+            <article class="category-card reveal">
+              <div class="icon">🌟</div>
+              <h3>المشاريع</h3>
+              <p>فرص جديدة ومبدعة للمشاريع النسائية.</p>
+            </article>
+            <article class="category-card reveal">
+              <div class="icon">🛠️</div>
+              <h3>الخدمات</h3>
+              <p>خدمات متنوعة تعزز حياتكِ العملية والشخصية.</p>
+            </article>
+            <article class="category-card reveal">
+              <div class="icon">🎉</div>
+              <h3>الفعاليات</h3>
+              <p>مناسبات ومبادرات تجمع بين الإلهام والتواصل.</p>
+            </article>
+            <article class="category-card reveal">
+              <div class="icon">📝</div>
+              <h3>المقالات</h3>
+              <p>محتوى ذكي وأنيق يثري تجربتكِ اليومية.</p>
+            </article>
+          </div>
+        </section>
 
-.btn:hover{
-transform:translateY(-3px);
-}
-</style>
+        <section class="stats section">
+          <div class="container">
+            <div class="section-heading reveal">
+              <p class="eyebrow">أرقام تُعبّر عن التميز</p>
+              <h2>أكثر من مجرد منصة</h2>
+              <p>نحن نُقدّم قيمة حقيقية من خلال مجتمع متنامٍ ومحتوى متجدد.</p>
+            </div>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3B455CWYYH"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+            <div class="stats-grid">
+              <div class="stat-card reveal">
+                <strong data-count="250">0+</strong>
+                <span>مشروعًا</span>
+              </div>
+              <div class="stat-card reveal">
+                <strong data-count="180">0+</strong>
+                <span>خدمة</span>
+              </div>
+              <div class="stat-card reveal">
+                <strong data-count="120">0+</strong>
+                <span>فعالية</span>
+              </div>
+              <div class="stat-card reveal">
+                <strong data-count="95">0+</strong>
+                <span>مقالة</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
-gtag('config', 'G-3B455CWYYH');
-</script>
+        <section class="follow section container" id="follow">
+          <div class="section-heading reveal">
+            <p class="eyebrow">تابعينا</p>
+            <h2>انضمي إلى قصصنا واحتفلي معًا</h2>
+            <p>تواصلوا معنا عبر منصاتنا لتبقى على اطلاع بكل ما هو جديد.</p>
+          </div>
 
-</head>
+          <div class="social-grid">
+            <a class="social-card reveal" href="#" target="_blank" rel="noreferrer">
+              <div class="icon">📸</div>
+              <h3>Instagram</h3>
+              <p>اكتشفي أحدث المحتوى والقصص.</p>
+            </a>
+            <a class="social-card reveal" href="#" target="_blank" rel="noreferrer">
+              <div class="icon">👍</div>
+              <h3>Facebook</h3>
+              <p>تواصلي مع مجتمعنا المتنامي.</p>
+            </a>
+            <a class="social-card reveal" href="#" target="_blank" rel="noreferrer">
+              <div class="icon">🎵</div>
+              <h3>TikTok</h3>
+              <p>تابعي قصصًا قصيرة ومميزة ومليئة بالإلهام.</p>
+            </a>
+          </div>
+        </section>
 
-<body>
+        <section class="cta section" id="cta">
+          <div class="container">
+            <div class="cta__box reveal">
+              <h2>رشحي مشروعك</h2>
+              <p>أضيفي مشروعك إلى السيدة وكوني جزءًا من تجربة مميزة تجمع بين الإبداع والتميز.</p>
+              <a class="btn btn--primary" href="#top">ابدئي الآن</a>
+            </div>
+          </div>
+        </section>
+      </main>
 
-<div class="card">
+      <footer class="footer">
+        <div class="container footer__content">
+          <p>© 2026 السيدة. كل الحقوق محفوظة.</p>
+          <a href="#top">العودة إلى الأعلى</a>
+        </div>
+      </footer>
+    </div>
 
-<h1>السيدة</h1>
-
-<p>
-منصة عربية تهتم بكل ما يخص المرأة.
-</p>
-
-<p style="margin-top:15px;">
-🚀 قريبًا...
-</p>
-
-<a class="btn" href="#">
-الموقع قيد الإنشاء
-</a>
-
-</div>
-
-</body>
+    <script src="js/app.js"></script>
+  </body>
 </html>
