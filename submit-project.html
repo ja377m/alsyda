@@ -303,6 +303,8 @@
           form.reset();
           successMessage.style.display = 'block';
         } catch (error) {
+          console.error(error);
+          alert(error.message);
           errorMessage.style.display = 'block';
         } finally {
           submitButton.disabled = false;
