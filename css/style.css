@@ -100,8 +100,9 @@ section {
 
 .hero {
   position: relative;
-  min-height: 74svh;
-  padding-bottom: 1.2rem;
+  min-height: 58svh;
+  padding-top: 0.6rem;
+  padding-bottom: 0.8rem;
   overflow: hidden;
 }
 
@@ -176,38 +177,45 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(74svh - 6.5rem);
-  padding: 1.2rem 0 0.6rem;
+  min-height: calc(58svh - 5rem);
+  padding: 0.2rem 0 0.1rem;
   position: relative;
   z-index: 2;
 }
 
 .hero__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  order: 2;
   width: min(100%, 900px);
   margin: 0 auto;
 }
 
+.hero__copy .eyebrow {
+  margin-bottom: 0.8rem;
+}
+
 .hero__copy h1 {
-  font-size: clamp(3.5rem, 5.7vw, 6rem);
-  margin: 0.1rem 0 0.2rem;
+  font-size: clamp(3.4rem, 5.4vw, 5.7rem);
+  margin: 0 0 0.15rem;
   line-height: 0.95;
   color: var(--primary-deep);
   letter-spacing: -0.03em;
 }
 
 .hero__copy h2 {
-  margin: 0 auto 0.7rem;
-  font-size: clamp(1.35rem, 2vw, 2rem);
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.3rem, 1.9vw, 1.95rem);
   color: var(--text);
   line-height: 1.2;
-  max-width: 680px;
+  max-width: 720px;
 }
 
 .hero__copy p {
-  margin: 0 auto 1.2rem;
-  font-size: 1.05rem;
+  margin: 0 0 1.1rem;
+  font-size: 1.03rem;
   color: var(--muted);
   max-width: 660px;
 }
@@ -215,8 +223,8 @@ section {
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-bottom: 1rem;
+  gap: 0.75rem;
+  margin: 0 0 0.9rem;
   justify-content: center;
 }
 
@@ -251,17 +259,18 @@ section {
 .hero__meta {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.7rem;
-  max-width: 620px;
+  gap: 0.6rem;
+  width: min(100%, 620px);
   margin: 0 auto;
 }
 
 .hero__meta > div {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: 18px;
   padding: 0.7rem 0.8rem;
   box-shadow: 0 10px 20px rgba(47, 34, 27, 0.04);
+  text-align: center;
 }
 
 .hero__meta strong {
@@ -445,7 +454,7 @@ section {
 
 @media (max-width: 1024px) {
   .hero__content {
-    padding: 1.3rem 0 0.8rem;
+    padding: 0.35rem 0 0.25rem;
     min-height: auto;
   }
   .hero__copy {
@@ -490,7 +499,8 @@ section {
   }
 
   .hero__content {
-    padding-top: 1.6rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.2rem;
   }
 
   .hero__copy {

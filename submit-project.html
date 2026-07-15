@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="رشحي مشروعك على منصة السيدة" />
+    <title>رشحي مشروعك | السيدة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fcf8f2;
+        --surface: #fffdf9;
+        --primary: #c95b73;
+        --primary-deep: #a43958;
+        --text: #2f221b;
+        --muted: #6d5f55;
+        --border: rgba(169, 57, 88, 0.15);
+        --shadow: 0 18px 44px rgba(47, 34, 27, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: 'Cairo', sans-serif;
+        background: linear-gradient(135deg, #fffaf6 0%, #fcf4eb 100%);
+        color: var(--text);
+        line-height: 1.7;
+        direction: rtl;
+      }
+
+      .page {
+        min-height: 100vh;
+        padding: 2rem 1rem 3rem;
+      }
+
+      .container {
+        width: min(960px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .card {
+        background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(248,239,227,0.95));
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        padding: 2rem;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+        color: var(--primary-deep);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      h1 {
+        margin: 0 0 0.4rem;
+        color: var(--primary-deep);
+        font-size: clamp(2rem, 3.2vw, 2.6rem);
+        line-height: 1.2;
+      }
+
+      .subtitle {
+        margin: 0 0 1.4rem;
+        color: var(--muted);
+        font-size: 1.02rem;
+      }
+
+      form {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .field.full {
+        grid-column: 1 / -1;
+      }
+
+      label {
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      input, select, textarea {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 0.85rem 0.95rem;
+        font: inherit;
+        color: var(--text);
+        background: rgba(255,255,255,0.9);
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .upload-box {
+        border: 1px dashed var(--border);
+        border-radius: 16px;
+        padding: 0.9rem 1rem;
+        background: rgba(255,255,255,0.75);
+      }
+
+      .upload-box input {
+        border: 0;
+        padding: 0;
+        background: transparent;
+      }
+
+      .actions {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+      }
+
+      button {
+        border: 0;
+        cursor: pointer;
+        padding: 1rem 1.4rem;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--primary), #e07995);
+        color: #fff;
+        font: inherit;
+        font-weight: 800;
+        box-shadow: 0 16px 32px rgba(201, 91, 115, 0.24);
+      }
+
+      .success {
+        display: none;
+        margin-top: 1rem;
+        padding: 1rem 1.1rem;
+        border-radius: 18px;
+        background: rgba(201, 91, 115, 0.1);
+        color: var(--primary-deep);
+        border: 1px solid rgba(201, 91, 115, 0.16);
+        font-weight: 700;
+      }
+
+      @media (max-width: 768px) {
+        .card { padding: 1.3rem; }
+        .grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="container">
+        <div class="card">
+          <a class="back-link" href="index.html">← العودة إلى الصفحة الرئيسية</a>
+          <h1>رشحي مشروعك</h1>
+          <p class="subtitle">املئي البيانات التالية ليتم مراجعة مشروعك وإضافته إلى منصة السيدة.</p>
+
+          <form id="projectForm">
+            <div class="grid">
+              <div class="field">
+                <label for="projectName">اسم المشروع *</label>
+                <input id="projectName" name="projectName" required />
+              </div>
+              <div class="field">
+                <label for="ownerName">اسم صاحبة المشروع *</label>
+                <input id="ownerName" name="ownerName" required />
+              </div>
+              <div class="field">
+                <label for="phone">رقم الهاتف *</label>
+                <input id="phone" name="phone" required />
+              </div>
+              <div class="field">
+                <label for="governorate">المحافظة *</label>
+                <input id="governorate" name="governorate" required />
+              </div>
+              <div class="field">
+                <label for="city">المدينة *</label>
+                <input id="city" name="city" required />
+              </div>
+              <div class="field">
+                <label for="category">التصنيف *</label>
+                <select id="category" name="category" required>
+                  <option value="">اختر التصنيف</option>
+                  <option>الجمال</option>
+                  <option>الصحة</option>
+                  <option>الأمومة</option>
+                  <option>التسوق</option>
+                  <option>المشاريع</option>
+                  <option>الخدمات</option>
+                  <option>الفعاليات</option>
+                  <option>المقالات</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field full">
+              <label for="description">وصف المشروع</label>
+              <textarea id="description" name="description"></textarea>
+            </div>
+
+            <div class="grid">
+              <div class="field">
+                <label for="facebook">رابط فيسبوك</label>
+                <input id="facebook" name="facebook" />
+              </div>
+              <div class="field">
+                <label for="instagram">رابط إنستغرام</label>
+                <input id="instagram" name="instagram" />
+              </div>
+              <div class="field">
+                <label for="tiktok">رابط تيك توك</label>
+                <input id="tiktok" name="tiktok" />
+              </div>
+              <div class="field">
+                <label for="maps">الموقع على خرائط Google</label>
+                <input id="maps" name="maps" />
+              </div>
+            </div>
+
+            <div class="grid">
+              <div class="field">
+                <label for="coverImage">Upload Cover Image</label>
+                <div class="upload-box">
+                  <input id="coverImage" name="coverImage" type="file" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="logo">Upload Logo</label>
+                <div class="upload-box">
+                  <input id="logo" name="logo" type="file" />
+                </div>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button type="submit">إرسال الطلب</button>
+            </div>
+
+            <div class="success" id="successMessage">
+              شكراً لك.<br />تم استلام طلبك وسيتم مراجعته قبل النشر.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById('projectForm');
+      const successMessage = document.getElementById('successMessage');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        successMessage.style.display = 'block';
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
