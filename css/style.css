@@ -462,6 +462,78 @@ section {
   transform: translateY(0);
 }
 
+.info-hero {
+  min-height: auto;
+  padding: 0.8rem 0 0.8rem;
+}
+
+.info-hero .hero__content {
+  min-height: auto;
+  justify-content: flex-start;
+  padding: 0.8rem 0 0.2rem;
+}
+
+.info-hero .hero__copy {
+  align-items: flex-start;
+  text-align: right;
+  width: min(100%, 850px);
+  margin: 0;
+}
+
+.info-hero .hero__copy h1 {
+  font-size: clamp(2.8rem, 4.2vw, 3.5rem);
+  line-height: 1.05;
+  margin-bottom: 0.3rem;
+}
+
+.info-hero .hero__copy p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  max-width: 760px;
+  margin-top: 0.2rem;
+}
+
+.info-section {
+  padding: 1rem 0 1.8rem;
+}
+
+.info-content {
+  width: min(100%, 850px);
+  margin: 0 auto;
+}
+
+.info-content .section-heading {
+  max-width: none;
+  margin-bottom: 1.2rem;
+}
+
+.info-content .section-heading h2 {
+  font-size: clamp(1.8rem, 2.4vw, 2.2rem);
+}
+
+.info-content .section-heading p {
+  font-size: 1.125rem;
+  line-height: 1.95;
+}
+
+.info-card {
+  padding: 1.35rem 1.45rem;
+}
+
+.info-card h3 {
+  margin-bottom: 0.35rem;
+}
+
+.info-card p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.info-content .about-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 @media (max-width: 1440px) {
   .hero__content {
     gap: 3.2rem;
@@ -522,6 +594,11 @@ section {
     padding-bottom: 0.2rem;
   }
 
+  .info-hero .hero__copy {
+    align-items: center;
+    text-align: center;
+  }
+
   .hero__copy {
     text-align: center;
   }
@@ -537,7 +614,8 @@ section {
   .about-grid,
   .categories-grid,
   .stats-grid,
-  .social-grid {
+  .social-grid,
+  .info-content .about-grid {
     grid-template-columns: 1fr;
   }
 
