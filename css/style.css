@@ -249,6 +249,25 @@ section {
   box-shadow: 0 16px 32px rgba(201, 91, 115, 0.24);
 }
 
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 1.05rem 1.55rem;
+  border-radius: 999px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), #e07995);
+  color: #fff;
+  box-shadow: 0 16px 32px rgba(201, 91, 115, 0.24);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
 .btn--ghost {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--border);
